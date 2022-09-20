@@ -8,14 +8,13 @@ const urlsImgProjects = [
 ];
 const getImageUrl = (number) => urlsImgProjects[number - 1];
 
-function addPostsHome(start, end) {
+function addPostsCards(start, end) {
   return fetch(
     `https://jsonplaceholder.typicode.com/posts?_start=${start}&_end=${end}`
   )
     .then((response) => response.json())
     .then((res) => {
       let data = "";
-      console.log(res);
       res.forEach((post) => {
         data += `
          <div class="card card-project">
@@ -27,11 +26,43 @@ function addPostsHome(start, end) {
           <p class="card-body-project">
             ${post.body.split(" ", 4).join(" ")}...
           </p>
-          <a id="linkToProject" href="./pages/project.html">Learn more</a>
+          <a id="linkToProject" href="">Learn more</a>
         </div>
         `;
       });
       return data;
     })
+    .catch((error) => console.log(error));
+}
+
+function addContentPost(postId) {
+  return fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
+    .then((response) => response.json())
+    .then(
+      (content) =>
+        `
+         <div class="flex">
+        <div>
+          <h1>${content.title}</h1>
+          <h4>${content.body.split(" ", 4).join(" ")}</h4>
+        </div>
+        <p class="text-lead-regular">
+          Completed on
+          <span class="text-meta">${content.id}/10/22</span>
+        </p>
+      </div>
+      <div class="img-project">
+        <img
+          src="${getImageUrl(content.id)}"
+          alt="Featured image project"
+        />
+      </div>
+      <div class="content">
+        <p>
+          ${content.body}
+        </p>
+      </div>
+        `
+    )
     .catch((error) => console.log(error));
 }

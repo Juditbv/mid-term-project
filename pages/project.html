@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Project -</title>
+    <title>Project</title>
   </head>
   <body>
     <nav class="flex nav-bar">
@@ -22,32 +22,7 @@
       </div>
       <a href="./contact.html" class="button-primary">Contact Us</a>
     </nav>
-    <main id="projectBody" class="container-default">
-      <div class="flex">
-        <div>
-          <h1>Simplify</h1>
-          <h4>Ui Design & App Development</h4>
-        </div>
-        <p class="text-lead-regular">
-          Completed on
-          <span class="text-meta">22/10/22</span>
-        </p>
-      </div>
-      <div class="img-project">
-        <img
-          src="https://drive.google.com/uc?export=view&id=1a-7rFlxvHg0g6yfl7hAVksayYQkJzk1b"
-          alt="Featured image project"
-        />
-      </div>
-      <div class="content">
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates
-          laudantium possimus vitae perspiciatis expedita esse corporis aut
-          incidunt ea omnis. Tempore ullam architecto totam, debitis molestias
-          ratione consequuntur libero odio.
-        </p>
-      </div>
-    </main>
+    <main id="projectBody" class="container-default"></main>
     <section id="otherProjects" class="container-default">
       <h3>Other Projects</h3>
       <div id="cardsProjects" class="flex"></div>
@@ -98,7 +73,10 @@
     <script src="../js/functions.js"></script>
     <script type="text/javascript">
       window.addEventListener("load", () => {
-        addPostsHome(3, 6).then(
+        addContentPost(2).then((content) => {
+          document.querySelector("#projectBody").innerHTML = content;
+        });
+        addPostsCards(3, 6).then(
           (html) => (document.querySelector("#cardsProjects").innerHTML = html)
         );
       });
