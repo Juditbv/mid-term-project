@@ -9,3 +9,13 @@
 
 ---- Main difficulty
 Find the way (not founded today) to retrieve a return from a fetch.then() to use this in an inline script to trigger the function differently depending on the page. But founded an easy way to solve the problem (adding a parameter to the main function).
+
+# DAY 2: 20/09/22
+
+- Finished calling content inside cards on home and project page
+- Added a function to call the specific content of 1 post on each project page.
+- Start adding styles on stylesheet
+
+---- Main difficulty
+Tried to create a function to add the active class on the menu depending on the page (but didn't find a convincing way to do it). I think I'll do it taking into consideration the url-
+Tried to "automattically" generate project pages using the project.html as a template, but didn't find a convincing way to do it neither. And I don't like the solution of creating every html for every project but... I think I'll do this.
