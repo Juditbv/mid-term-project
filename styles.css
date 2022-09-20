@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #f4f6fc;
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+  line-height: 1.2;
+}
+
+body {
+  font-size: 2rem;
+  color: #6b708d;
+  padding: 0 3rem;
+}
+
+/*HEADINGS*/
+h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  color: #292e47;
+}
+
+h3 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #292e47;
+}
+
+h4 {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+/*CONTAINERS*/
+.container-default {
+  max-width: 110rem;
+  margin: 0 auto;
+}
+
+.container-large {
+  max-width: 132rem;
+  margin: 0 auto;
+}
+
+/*MARGINS*/
+.margin-small-top {
+  margin-top: 4rem;
+}
+
+.margin-medium-top {
+  margin-top: 10rem;
+}
+
+.margin-large-top {
+  margin-top: 20rem;
+}
+
+/*POSITION*/
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid {
+  display: grid;
+}
+
+/*TOP MENU*/
+.nav-bar {
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 7rem;
+}
+
+.nav-bar li {
+  list-style-type: none;
+  margin: 0 3rem;
+}
+
+.nav-bar ul a {
+  color: #6b708d;
+  font-weight: 500;
+}
+
+.nav-bar ul a:hover {
+  color: #072ac8;
+}
+
+/* .active {
+  color: #0082f3 !important;
+} */
+
+/*LINKS*/
+a {
+  text-decoration: none;
+  font-size: 1.7rem;
+}
+
+/*BUTTONS*/
+.button-primary {
+  color: white;
+  font-weight: 500;
+  padding: 1.5rem 3.5rem;
+  background-color: #072ac8;
+}
+
+/*TEXT*/

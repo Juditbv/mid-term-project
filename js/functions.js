@@ -66,3 +66,15 @@ function addContentPost(postId) {
     )
     .catch((error) => console.log(error));
 }
+
+// const activeMenu = () => {
+//   const menu = document.querySelector("ul.menu-items").querySelectorAll("li");
+//   for (let i = 0; i <= menu.length; i++) {
+//     menu[i].addEventListener("click", () => {
+//       const currentActive = document.querySelector("active");
+//       currentActive.className = currentActive.className.replace(" active", "");
+//       this.className += " active";
+//     });
+//   }
+// };
+// activeMenu();
