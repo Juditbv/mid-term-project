@@ -9,13 +9,13 @@ const urlsImgProjects = [
 const getImageUrl = (number) => urlsImgProjects[number - 1];
 
 function addPostsHome(start, end) {
-  fetch(
+  return fetch(
     `https://jsonplaceholder.typicode.com/posts?_start=${start}&_end=${end}`
   )
     .then((response) => response.json())
     .then((res) => {
       let data = "";
-      // console.log(res);
+      console.log(res);
       res.forEach((post) => {
         data += `
          <div class="card card-project">
@@ -31,7 +31,6 @@ function addPostsHome(start, end) {
         </div>
         `;
       });
-      console.log(data);
       return data;
     })
     .catch((error) => console.log(error));
