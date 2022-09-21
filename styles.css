@@ -455,6 +455,7 @@ input[type="submit"] {
 
   .hero-right img:last-child,
   .hero-right img:first-child {
+    display: block;
     width: 55%;
     max-width: 37rem;
     position: absolute;

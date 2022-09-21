@@ -29,7 +29,7 @@ function addPostsCards(start, end) {
             ${post.body.split(" ", 4).join(" ")}...
           </p>
           </div>
-          <a id="linkToProject" href="">Learn more</a>
+          <a id="linkToProject" href="../pages/project.html">Learn more</a>
           </div>
         </div>
         `;
