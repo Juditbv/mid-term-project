@@ -5,7 +5,7 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   font-size: 10px;
-  line-height: 1.2;
+  line-height: 1.5;
 }
 
 body {
@@ -95,6 +95,7 @@ p {
   font-size: 2.4rem;
   font-weight: 500;
 }
+
 .text-small {
   font-size: 1.7rem;
 }
@@ -121,6 +122,10 @@ p {
   font-weight: 500;
   padding: 1.5rem 3.5rem;
   background-color: #072ac8;
+}
+
+.button-primary:hover {
+  background-color: #292e47;
 }
 
 /*CARDS*/
@@ -310,4 +315,57 @@ p {
 #ctaContact {
   background-color: #ffc600;
   padding: 15rem 10rem;
+}
+
+/*FOOTER*/
+.menu-footer {
+  list-style-type: none;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 4rem;
+}
+
+footer {
+  justify-content: space-between;
+  margin-bottom: 10rem;
+}
+
+footer img {
+  width: 10rem;
+}
+
+/*FORMS*/
+#newsletter {
+  align-items: center;
+  justify-content: center;
+}
+
+#newsletter input#email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f6fc;
+  margin-right: 2rem;
+  padding-left: 7rem;
+  background-image: url("https://drive.google.com/uc?export=view&id=18Ys329Csn8jRw1sStIVEEa5GRhdzczuY");
+  background-repeat: no-repeat;
+  background-position: 11% 40%;
+  background-size: 12%;
+}
+
+input {
+  font-size: 1.7rem;
+  border: none;
+  background-color: transparent;
+  padding: 1.4rem 3.5rem 1.4rem 0;
+  margin-right: 2rem;
+}
+
+input:focus-visible {
+  outline: 1px solid #3898ec;
+}
+
+input[type="submit"] {
+  border: none;
+  cursor: pointer;
 }
