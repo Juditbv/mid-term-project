@@ -45,40 +45,26 @@ function addContentPost(postId) {
     .then(
       (content) =>
         `
-         <div class="flex">
+         <div class="flex header-post">
         <div>
           <h1>${content.title}</h1>
           <h4>${content.body.split(" ", 4).join(" ")}</h4>
         </div>
-        <p class="text-lead-regular">
+        <p class="text-lead-regular date-completed">
           Completed on
           <span class="text-meta">${content.id}/10/22</span>
         </p>
       </div>
-      <div class="img-project">
+      <div class="img-project margin-medium-top">
         <img
           src="${getImageUrl(content.id)}"
           alt="Featured image project"
         />
       </div>
-      <div class="content">
-        <p>
+        <p class="margin-small-top">
           ${content.body}
         </p>
-      </div>
         `
     )
     .catch((error) => console.log(error));
 }
-
-// const activeMenu = () => {
-//   const menu = document.querySelector("ul.menu-items").querySelectorAll("li");
-//   for (let i = 0; i <= menu.length; i++) {
-//     menu[i].addEventListener("click", () => {
-//       const currentActive = document.querySelector("active");
-//       currentActive.className = currentActive.className.replace(" active", "");
-//       this.className += " active";
-//     });
-//   }
-// };
-// activeMenu();

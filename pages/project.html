@@ -8,7 +8,7 @@
     <title>Project</title>
   </head>
   <body>
-    <nav class="flex nav-bar">
+    <nav class="flex nav-bar container-default">
       <a href="../index.html">
         <img
           src="https://drive.google.com/uc?export=view&id=16_b57q5C8quSC2RYqLtxLzHm-zpg3dYl"
@@ -24,32 +24,29 @@
       </div>
       <a href="./contact.html" class="button-primary">Contact Us</a>
     </nav>
-    <main id="projectBody" class="container-default"></main>
-    <section id="otherProjects" class="container-default">
+    <main id="projectBody" class="container-default margin-medium-top"></main>
+    <section id="otherProjects" class="container-default margin-large-top">
       <h3>Other Projects</h3>
-      <div id="cardsProjects" class="flex"></div>
+      <div id="cardsProjects" class="flex margin-medium-top"></div>
     </section>
-    <section id="ctaContact" class="container-large">
+    <section
+      id="ctaContact"
+      class="container-large margin-large-top text-center"
+    >
       <h3>Do you have any questions?</h3>
-      <p>Let us help you!</p>
-      <form action="" method="post">
-        <label for="email">
-          <img
-            src="https://drive.google.com/uc?export=view&id=18Ys329Csn8jRw1sStIVEEa5GRhdzczuY"
-            alt="Your email"
-          />
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Enter your email"
-            required
-          />
-        </label>
+      <p class="text-small">Let us help you!</p>
+      <form id="newsletter" class="margin-small-top flex">
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter your email"
+          required
+        />
         <input type="submit" value="Subscribe" class="button-primary" />
       </form>
     </section>
-    <footer>
+    <footer class="margin-large-top flex container-default">
       <div>
         <img
           src="https://drive.google.com/uc?export=view&id=16_b57q5C8quSC2RYqLtxLzHm-zpg3dYl"
@@ -62,7 +59,7 @@
         </p>
       </div>
       <div>
-        <ul class="menu-footer">
+        <ul class="grid menu-footer">
           <li><a href="#">Team</a></li>
           <li><a href="#">Services</a></li>
           <li><a href="#">About Us</a></li>
