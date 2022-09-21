@@ -22,11 +22,13 @@ function addPostsCards(start, end) {
             src="${getImageUrl(post.id)}"
             alt="${post.title} featured image"
           />
+          <div class="card-content flex">
           <h4 class="card-title">${post.title}</h4>
-          <p class="card-body-project">
+          <p class="card-body">
             ${post.body.split(" ", 4).join(" ")}...
           </p>
           <a id="linkToProject" href="">Learn more</a>
+          </div>
         </div>
         `;
       });
