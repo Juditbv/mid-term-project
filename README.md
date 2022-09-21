@@ -19,3 +19,7 @@ Find the way (not founded today) to retrieve a return from a fetch.then() to use
 ---- Main difficulty
 Tried to create a function to add the active class on the menu depending on the page (but didn't find a convincing way to do it). I think I'll do it taking into consideration the url-
 Tried to "automattically" generate project pages using the project.html as a template, but didn't find a convincing way to do it neither. And I don't like the solution of creating every html for every project but... I think I'll do this.
+
+# DAY 3: 21/09/22
+
+- Basically, working all day to add the css styles of the Home page and the project page. Just have left the contact page, and some responsive styles/behaviour, like the hamburger menu.
