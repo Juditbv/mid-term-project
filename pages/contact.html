@@ -22,11 +22,12 @@
       </div>
       <a href="./contact.html" class="button-primary">Contact Us</a>
     </nav>
-    <main>
+    <main class="container-default margin-large-top">
       <h1>Contact Us</h1>
-      <form action="https://jsonplaceholder.typicode.com/posts" method="post">
-        <div>
+      <form id="contactPage" method="post" class="flex margin-small-top">
+        <div class="input-container">
           <label for="name">Full Name</label>
+          <br />
           <input
             type="text"
             name="full-name"
@@ -36,8 +37,9 @@
             required
           />
         </div>
-        <div>
+        <div class="input-container-medium">
           <label for="email">Email</label>
+          <br />
           <input
             type="email"
             name="email"
@@ -47,8 +49,9 @@
             required
           />
         </div>
-        <div>
+        <div class="input-container-medium">
           <label for="phone">Phone</label>
+          <br />
           <input
             type="tel"
             name="phone"
@@ -58,13 +61,15 @@
             required
           />
         </div>
-        <div>
+        <div class="input-container">
           <label for="message">Message</label>
+          <br />
           <textarea
             name="message"
             id="message"
             minlength="20"
             maxlength="1000"
+            rows="8"
             placeholder="Write your message here..."
             required
           ></textarea>

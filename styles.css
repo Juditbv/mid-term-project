@@ -368,16 +368,37 @@ footer img {
   min-width: 100%;
 }
 
-input {
+input,
+textarea {
   font-size: 1.7rem;
   border: none;
   background-color: transparent;
-  padding: 1.4rem 3.5rem 1.4rem 0;
+  padding: 1.5rem 2rem;
   margin-right: 2rem;
 }
 
-input:focus-visible {
+#contactPage .input-container {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+#contactPage input,
+#contactPage textarea {
+  width: 100%;
+}
+
+#contactPage input:not([type="submit"]),
+textarea {
+  background-color: rgba(107, 112, 141, 0.1);
+}
+
+input:focus-visible,
+textarea:focus-visible {
   outline: 1px solid #3898ec;
+}
+
+label {
+  font-size: 2rem;
 }
 
 input[type="submit"] {
@@ -430,6 +451,15 @@ input[type="submit"] {
 
 /*RESPONSIVE*/
 @media (min-width: 980px) {
+  #contactPage .input-container-medium {
+    width: calc(50% - 2rem);
+  }
+
+  #contactPage {
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
   .img-project {
     height: 45rem;
   }
