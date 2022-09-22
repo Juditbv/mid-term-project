@@ -374,17 +374,18 @@ textarea {
   border: none;
   background-color: transparent;
   padding: 1.5rem 2rem;
-  margin-right: 2rem;
 }
 
 #contactPage .input-container {
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
 }
 
 #contactPage input,
 #contactPage textarea {
   width: 100%;
+  margin-top: 1rem;
 }
 
 #contactPage input:not([type="submit"]),
@@ -405,6 +406,23 @@ input[type="submit"] {
   border: none;
   cursor: pointer;
   margin-top: 2rem;
+}
+
+#formMessageOk,
+#formMessageKo {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+#formMessageOk {
+  background-color: rgb(187, 246, 187);
+}
+
+#formMessageKo {
+  background-color: rgb(255, 142, 142);
 }
 
 /*PROJECT PAGE*/
