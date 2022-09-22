@@ -5,7 +5,6 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   font-size: 10px;
-  line-height: 1.5;
 }
 
 body {
@@ -17,18 +16,21 @@ body {
 /*HEADINGS*/
 h1 {
   font-size: 6rem;
+  line-height: 1.5;
   font-weight: 700;
   color: #292e47;
 }
 
 h3 {
   font-size: 4rem;
+  line-height: 1.5;
   font-weight: 700;
   color: #292e47;
 }
 
 h4 {
   font-size: 2.4rem;
+  line-height: 1.5;
   font-weight: 500;
   color: #292e47;
 }
@@ -86,6 +88,7 @@ a {
 p {
   font-size: 2rem;
   margin-top: 2rem;
+  line-height: 1.5;
 }
 
 .text-center {
@@ -192,7 +195,9 @@ p {
 .nav-bar {
   align-items: center;
   justify-content: space-between;
-  margin-top: 7rem;
+  background-color: #f4f6fc;
+  position: relative;
+  z-index: 10;
 }
 
 .nav-bar li {
@@ -207,6 +212,61 @@ p {
 
 .nav-bar ul a:hover {
   color: #072ac8;
+}
+
+.nav-bar div.desktop,
+.nav-bar a.button-primary.desktop {
+  display: none;
+}
+
+.button-burger {
+  padding: 1.8rem;
+  z-index: 10;
+}
+
+.button-burger svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.button-burger[active] {
+  background-color: #c8c8c8;
+  z-index: 10;
+}
+
+.button-burger[active] svg {
+  fill: #f4f6fc;
+}
+
+.menu-mobile {
+  background-color: #c8c8c8;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem;
+  position: absolute;
+  /* top: 2rem; */
+  z-index: 2;
+  transform: translate(0, -23rem);
+  transition: transform ease-in-out 0.5s;
+}
+
+.menu-mobile[active] {
+  transform: translate(0, 0);
+}
+
+.menu-mobile .menu-items {
+  flex-direction: column;
+}
+
+.menu-mobile li {
+  margin: 1rem 0;
+}
+
+.menu-mobile .button-primary {
+  margin-left: 4rem;
+  margin-top: 1rem;
 }
 
 /*HERO*/
@@ -376,7 +436,8 @@ textarea {
   padding: 1.5rem 2rem;
 }
 
-#contactPage .input-container {
+#contactPage .input-container,
+#contactPage .input-container-medium {
   width: 100%;
   margin-bottom: 2rem;
   margin-top: 1rem;
@@ -469,6 +530,23 @@ input[type="submit"] {
 
 /*RESPONSIVE*/
 @media (min-width: 980px) {
+  .menu-mobile {
+    display: none;
+  }
+
+  .nav-bar div.desktop,
+  .nav-bar a.button-primary.desktop {
+    display: block;
+  }
+
+  .nav-bar {
+    margin-top: 6rem;
+  }
+
+  .nav-bar a.button-burger {
+    display: none;
+  }
+
   #contactPage .input-container-medium {
     width: calc(50% - 2rem);
   }

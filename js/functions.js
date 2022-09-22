@@ -6,6 +6,8 @@ const urlsImgProjects = [
   "https://drive.google.com/uc?export=view&id=16rKQVZ9g4QZluatqPMqL_7zZjrZOacd-",
   "https://drive.google.com/uc?export=view&id=18ZwmbDNoL2dhIApXMrfMTmyjUCinDYjq",
 ];
+const url = window.location.href;
+
 const getImageUrl = (number) => urlsImgProjects[number - 1];
 
 function addPostsCards(start, end) {
@@ -73,45 +75,56 @@ function addContentPost(postId) {
     .catch((error) => console.log(error));
 }
 
-document.querySelector("#contactPage").addEventListener("submit", addPost);
-function addPost(form) {
-  form.preventDefault();
+if (url.includes("contact")) {
+  document.querySelector("#contactPage").addEventListener("submit", addPost);
+  function addPost(form) {
+    form.preventDefault();
 
-  let name = document.querySelector("#name").value;
-  let email = document.querySelector("#email").value;
-  let phone = document.querySelector("#phone").value;
-  let message = document.querySelector("#message").value;
+    let name = document.querySelector("#name").value;
+    let email = document.querySelector("#email").value;
+    let phone = document.querySelector("#phone").value;
+    let message = document.querySelector("#message").value;
 
-  fetch("https://jsonplaceholder.typicode.com/comments", {
-    method: "POST",
-    headers: {
-      "Content-type": "application/json",
-      Accept: "application/json, text/plain",
-    },
-    body: JSON.stringify({
-      name: name,
-      email: email,
-      phone: phone,
-      body: message,
-    }),
-  })
-    .then((response) => response.json())
-    .then((formData) => console.log(formData))
-    .then(() => {
-      let message = `<div id="formMessageOk" class="flex">
-        <h6>Thanks for you message!</h6>
-      </div>`;
-      document.querySelector("#formMessage").innerHTML = message;
+    fetch("https://jsonplaceholder.typicode.com/comments", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+        Accept: "application/json, text/plain",
+      },
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        phone: phone,
+        body: message,
+      }),
     })
-    .catch(() => {
-      let message = `<div id="formMessageKo" class="flex">
-        <h6>Something went wrong, try it again!</h6>
+      .then((response) => response.json())
+      .then((formData) => console.log(formData))
+      .then(() => {
+        let message = `<div id="formMessageOk" class="flex">
+        <h6 class="text-small">Thanks for your message!</h6>
       </div>`;
-      document.querySelector("#formMessage").innerHTML = message;
-    });
+        document.querySelector("#formMessage").innerHTML = message;
+      })
+      .catch(() => {
+        let message = `<div id="formMessageKo" class="flex">
+        <h6 class="text-small">Something went wrong, try it again!</h6>
+      </div>`;
+        document.querySelector("#formMessage").innerHTML = message;
+      });
 
-  document.querySelector("#name").value = "";
-  document.querySelector("#email").value = "";
-  document.querySelector("#phone").value = "";
-  document.querySelector("#message").value = "";
+    document.querySelector("#name").value = "";
+    document.querySelector("#email").value = "";
+    document.querySelector("#phone").value = "";
+    document.querySelector("#message").value = "";
+  }
 }
+
+const displayMenu = () => {
+  const menuMob = document.querySelector(".menu-mobile");
+  const button = document.querySelector(".button-burger");
+  menuMob.style = "";
+  menuMob.toggleAttribute("active");
+  button.toggleAttribute("active");
+};
+document.querySelector(".button-burger").addEventListener("click", displayMenu);
