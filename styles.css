@@ -172,7 +172,7 @@ p {
 
 #cardsProjects {
   justify-content: space-between;
-  gap: 4rem;
+  gap: 3.8rem;
 }
 
 .card-service {
@@ -375,7 +375,7 @@ p {
 /*SERVICES*/
 #services div.flex {
   justify-content: space-between;
-  gap: 4rem;
+  gap: 3.8rem;
 }
 
 /*NEWSLETTER*/
@@ -419,7 +419,6 @@ footer img {
   align-items: center;
   justify-content: center;
   background-color: #f4f6fc;
-  margin-right: 2rem;
   padding-left: 7rem;
   background-image: url("https://drive.google.com/uc?export=view&id=18Ys329Csn8jRw1sStIVEEa5GRhdzczuY");
   background-repeat: no-repeat;
@@ -497,32 +496,15 @@ input[type="submit"] {
 
 .header-post div:first-child {
   margin-right: 5rem;
-  max-width: 60%;
 }
 
 .img-project {
   height: auto;
   overflow: hidden;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  mask-border-outset: 2rem;
 }
 
 .img-project img {
-  position: absolute;
   max-width: 100%;
-}
-
-.img-project img:first-child {
-  z-index: 3;
-}
-
-.img-project img:last-child {
-  z-index: 1;
-  opacity: 0.4;
-  filter: saturate(200%) blur(40px);
 }
 
 .date-completed {
@@ -555,6 +537,10 @@ input[type="submit"] {
   #contactPage {
     justify-content: space-between;
     gap: 1rem;
+  }
+
+  .header-post div:first-child {
+    max-width: 60%;
   }
 
   .img-project {
@@ -640,7 +626,7 @@ input[type="submit"] {
   }
 
   .card {
-    width: calc(33.3% - 4rem);
+    width: calc(33.3% - 3.8rem);
   }
 
   .margin-large-top {
@@ -654,6 +640,7 @@ input[type="submit"] {
   #newsletter input#email {
     min-width: max-content;
     background-position: 11% 40%;
+    margin-right: 2rem;
   }
 
   input[type="submit"] {
