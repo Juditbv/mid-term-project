@@ -402,10 +402,26 @@ input[type="submit"] {
 .img-project {
   height: auto;
   overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mask-border-outset: 2rem;
 }
 
 .img-project img {
+  position: absolute;
   max-width: 100%;
+}
+
+.img-project img:first-child {
+  z-index: 3;
+}
+
+.img-project img:last-child {
+  z-index: 1;
+  opacity: 0.4;
+  filter: saturate(200%) blur(40px);
 }
 
 .date-completed {
