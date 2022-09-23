@@ -137,9 +137,9 @@ const displayMenu = () => {
   const button = document.querySelector(".button-burger");
   menuMob.toggleAttribute("active");
   button.toggleAttribute("active");
-  window.addEventListener("resize", () => {
-    button.toggleAttribute("active");
-    menuMob.toggleAttribute("active");
-  });
 };
 document.querySelector(".button-burger").addEventListener("click", displayMenu);
+window.addEventListener("resize", () => {
+  document.querySelector(".menu-mobile").toggleAttribute("active");
+  document.querySelector(".button-burger").toggleAttribute("active");
+});
