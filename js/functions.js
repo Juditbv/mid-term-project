@@ -137,7 +137,7 @@ const displayMenu = () => {
   const button = document.querySelector(".button-burger");
   menuMob.toggleAttribute("active");
   button.toggleAttribute("active");
-  menuMob.addEventListener("reize", () => {
+  menuMob.addEventListener("resize", () => {
     button.toggleAttribute("active");
     menuMob.toggleAttribute("active");
   });
