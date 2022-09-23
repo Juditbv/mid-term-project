@@ -140,6 +140,6 @@ const displayMenu = () => {
 };
 document.querySelector(".button-burger").addEventListener("click", displayMenu);
 window.addEventListener("resize", () => {
-  document.querySelector(".menu-mobile").toggleAttribute("active");
-  document.querySelector(".button-burger").toggleAttribute("active");
+  document.querySelector(".menu-mobile").removeAttribute("active");
+  document.querySelector(".button-burger").removeAttribute("active");
 });
