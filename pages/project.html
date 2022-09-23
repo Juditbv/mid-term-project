@@ -91,15 +91,5 @@
       </div>
     </footer>
     <script src="../js/functions.js"></script>
-    <script type="text/javascript">
-      window.addEventListener("load", () => {
-        addContentPost(1).then((content) => {
-          document.querySelector("#projectBody").innerHTML = content;
-        });
-        addPostsCards(3, 6).then(
-          (html) => (document.querySelector("#cardsProjects").innerHTML = html)
-        );
-      });
-    </script>
   </body>
 </html>

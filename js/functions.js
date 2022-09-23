@@ -6,9 +6,26 @@ const urlsImgProjects = [
   "https://drive.google.com/uc?export=view&id=16rKQVZ9g4QZluatqPMqL_7zZjrZOacd-",
   "https://drive.google.com/uc?export=view&id=18ZwmbDNoL2dhIApXMrfMTmyjUCinDYjq",
 ];
+const formContactPage = document.querySelector("#contactPage");
 const url = window.location.href;
-
 const getImageUrl = (number) => urlsImgProjects[number - 1];
+
+if (url.includes("index")) {
+  window.addEventListener("load", () => {
+    addPostsCards(0, 3).then(
+      (html) => (document.querySelector("#cardsProjects").innerHTML = html)
+    );
+  });
+} else if (url.includes("project")) {
+  window.addEventListener("load", () => {
+    addContentPost(1).then((content) => {
+      document.querySelector("#projectBody").innerHTML = content;
+    });
+    addPostsCards(3, 6).then((html) => {
+      document.querySelector("#cardsProjects").innerHTML = html;
+    });
+  });
+}
 
 function addPostsCards(start, end) {
   return fetch(
@@ -71,7 +88,7 @@ function addContentPost(postId) {
     .catch((error) => console.log(error));
 }
 
-if (url.includes("contact")) {
+if (formContactPage) {
   document.querySelector("#contactPage").addEventListener("submit", addPost);
   function addPost(form) {
     form.preventDefault();
