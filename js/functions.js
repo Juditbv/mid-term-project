@@ -9,6 +9,9 @@ const urlsImgProjects = [
 const formContactPage = document.querySelector("#contactPage");
 const projectsHome = document.querySelector("#cardsProjectsRecent");
 const projectsProject = document.querySelector("#cardsProjectsOther");
+const menuMob = document.querySelector(".menu-mobile");
+const button = document.querySelector(".button-burger");
+
 const getImageUrl = (number) => urlsImgProjects[number - 1];
 
 if (projectsHome) {
@@ -133,13 +136,13 @@ if (formContactPage) {
 }
 
 const displayMenu = () => {
-  const menuMob = document.querySelector(".menu-mobile");
-  const button = document.querySelector(".button-burger");
   menuMob.toggleAttribute("active");
   button.toggleAttribute("active");
 };
 document.querySelector(".button-burger").addEventListener("click", displayMenu);
-document.querySelector(".menu-mobile").addEventListener("resize", () => {
-  document.querySelector(".button-burger").toggleAttribute("active");
-  document.querySelector(".menu-mobile").toggleAttribute("active");
-});
+
+const outMobileMenu = () => {
+  menuMob.removeAttribute("active");
+  button.removeAttribute("active");
+};
+window.addEventListener("resize", outMobileMenu);
