@@ -10,25 +10,21 @@ const formContactPage = document.querySelector("#contactPage");
 const url = window.location.href;
 const getImageUrl = (number) => urlsImgProjects[number - 1];
 
-addCards();
-
-function addCards() {
-  if (url.includes("index")) {
-    window.addEventListener("load", () => {
-      addPostsCards(0, 3).then(
-        (html) => (document.querySelector("#cardsProjects").innerHTML = html)
-      );
+if (url.includes("index")) {
+  window.addEventListener("load", () => {
+    addPostsCards(0, 3).then(
+      (html) => (document.querySelector("#cardsProjects").innerHTML = html)
+    );
+  });
+} else if (url.includes("project")) {
+  window.addEventListener("load", () => {
+    addContentPost(1).then((content) => {
+      document.querySelector("#projectBody").innerHTML = content;
     });
-  } else if (url.includes("project")) {
-    window.addEventListener("load", () => {
-      addContentPost(1).then((content) => {
-        document.querySelector("#projectBody").innerHTML = content;
-      });
-      addPostsCards(3, 6).then((html) => {
-        document.querySelector("#cardsProjects").innerHTML = html;
-      });
+    addPostsCards(3, 6).then((html) => {
+      document.querySelector("#cardsProjects").innerHTML = html;
     });
-  }
+  });
 }
 
 function addPostsCards(start, end) {
