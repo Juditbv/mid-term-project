@@ -7,22 +7,21 @@ const urlsImgProjects = [
   "https://drive.google.com/uc?export=view&id=18ZwmbDNoL2dhIApXMrfMTmyjUCinDYjq",
 ];
 const formContactPage = document.querySelector("#contactPage");
-const url = window.location.href;
+const projectsHome = document.querySelector("#cardsProjectsRecent");
+const projectsProject = document.querySelector("#cardsProjectsOther");
 const getImageUrl = (number) => urlsImgProjects[number - 1];
 
-if (url.includes("index")) {
+if (projectsHome) {
   window.addEventListener("load", () => {
-    addPostsCards(0, 3).then(
-      (html) => (document.querySelector("#cardsProjects").innerHTML = html)
-    );
+    addPostsCards(0, 3).then((html) => (projectsHome.innerHTML = html));
   });
-} else if (url.includes("project")) {
+} else if (projectsProject) {
   window.addEventListener("load", () => {
     addContentPost(1).then((content) => {
       document.querySelector("#projectBody").innerHTML = content;
     });
     addPostsCards(3, 6).then((html) => {
-      document.querySelector("#cardsProjects").innerHTML = html;
+      projectsProject.innerHTML = html;
     });
   });
 }
