@@ -397,6 +397,10 @@ p {
   text-align: left;
 }
 
+.menu-footer a {
+  color: #072ac8;
+}
+
 footer {
   flex-direction: column;
   justify-content: center;
