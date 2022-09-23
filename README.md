@@ -8,7 +8,8 @@
 - Create general function to fetch content for the projects section: with parameters to change the posts called in each page.
 
 ---- Main difficulty
-Find the way (not founded today) to retrieve a return from a fetch.then() to use this in an inline script to trigger the function differently depending on the page. But founded an easy way to solve the problem (adding a parameter to the main function).
+
+- Find the way (not founded today) to retrieve a return from a fetch.then() to use this in an inline script to trigger the function differently depending on the page. But founded an easy way to solve the problem (adding a parameter to the main function).
 
 ## DAY 2: 20/09/22
 
@@ -17,8 +18,9 @@ Find the way (not founded today) to retrieve a return from a fetch.then() to use
 - Start adding styles on stylesheet
 
 ---- Main difficulty
-Tried to create a function to add the active class on the menu depending on the page (but didn't find a convincing way to do it). I think I'll do it taking into consideration the url-
-Tried to "automattically" generate project pages using the project.html as a template, but didn't find a convincing way to do it neither. And I don't like the solution of creating every html for every project but... I think I'll do this.
+
+- Tried to create a function to add the active class on the menu depending on the page (but didn't find a convincing way to do it). I think I'll do it taking into consideration the url-
+- Tried to "automattically" generate project pages using the project.html as a template, but didn't find a convincing way to do it neither. And I don't like the solution of creating every html for every project but... I think I'll do this.
 
 ## DAY 3: 21/09/22
 
@@ -31,4 +33,5 @@ Tried to "automattically" generate project pages using the project.html as a tem
 - Finished the styles of the project page
 
 ---- Main difficulty
-Tried to create the blur effect/shadow of the project image, but didn't find a convincing solution, as I wanted to have the image inside a limited div (with overflow hidden) and couldn't achieve the desired result. I finally left it.
+
+- Tried to create the blur effect/shadow of the project image, but didn't find a convincing solution, as I wanted to have the image inside a limited div (with overflow hidden) and couldn't achieve the desired result. I finally left it.
