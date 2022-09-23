@@ -326,7 +326,7 @@ p {
   background-color: #292e47;
   background-image: url("https://drive.google.com/uc?export=view&id=17TYY3EM05ErroQlMmHyxPO_6gTDtkK34");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   padding: 15rem 10rem;
 }
 
