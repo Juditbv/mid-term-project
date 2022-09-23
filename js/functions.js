@@ -135,8 +135,11 @@ if (formContactPage) {
 const displayMenu = () => {
   const menuMob = document.querySelector(".menu-mobile");
   const button = document.querySelector(".button-burger");
-  menuMob.style = "";
   menuMob.toggleAttribute("active");
   button.toggleAttribute("active");
+  window.addEventListener("resize", () => {
+    button.toggleAttribute("active");
+    menuMob.toggleAttribute("active");
+  });
 };
 document.querySelector(".button-burger").addEventListener("click", displayMenu);
