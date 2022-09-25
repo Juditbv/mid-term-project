@@ -504,12 +504,21 @@ input[type="submit"] {
 }
 
 .img-project {
-  height: auto;
-  overflow: hidden;
+  position: relative;
+  height: 35rem;
 }
 
 .img-project img {
-  max-width: 100%;
+  width: 100%;
+  height: 35rem;
+  object-fit: cover;
+  position: absolute;
+}
+
+.img-project img:last-child {
+  z-index: -1;
+  filter: blur(4rem) saturate(150%);
+  opacity: 0.4;
 }
 
 .date-completed {
@@ -549,6 +558,10 @@ input[type="submit"] {
   }
 
   .img-project {
+    height: 45rem;
+  }
+
+  .img-project img {
     height: 45rem;
   }
 

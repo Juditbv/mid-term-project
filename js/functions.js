@@ -81,6 +81,10 @@ function addContentPost(postId) {
           src="${getImageUrl(content.id)}"
           alt="Featured image project"
         />
+        <img
+          src="${getImageUrl(content.id)}"
+          alt="Featured image project"
+        />
       </div>
         <p class="margin-small-top">
           ${content.body}
