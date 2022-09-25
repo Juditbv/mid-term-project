@@ -20,7 +20,8 @@ if (projectsHome) {
   });
 } else if (projectsProject) {
   window.addEventListener("load", () => {
-    addContentPost(1).then((content) => {
+    const postId = getUrlParam("post");
+    addContentPost(postId).then((content) => {
       document.querySelector("#projectBody").innerHTML = content;
     });
     addPostsCards(3, 6).then((html) => {
@@ -37,6 +38,7 @@ function addPostsCards(start, end) {
     .then((res) => {
       let data = "";
       res.forEach((post) => {
+        const linkCard = `../pages/project.html?post=${post.id}`;
         data += `
          <div class="card card-project">
           <img
@@ -50,7 +52,7 @@ function addPostsCards(start, end) {
             ${post.body.split(" ", 4).join(" ")}...
           </p>
           </div>
-          <a id="linkToProject" href="../pages/project.html">Learn more</a>
+          <a id="linkToProject" href=${linkCard}>Learn more</a>
           </div>
         </div>
         `;
@@ -92,6 +94,11 @@ function addContentPost(postId) {
         `
     )
     .catch((error) => console.log(error));
+}
+
+function getUrlParam(paramName) {
+  const params = new URLSearchParams(document.location.search);
+  return params.get(paramName);
 }
 
 if (formContactPage) {
